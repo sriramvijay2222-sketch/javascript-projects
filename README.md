@@ -1,2 +1,12 @@
-# javascript-projects
-A collection of JavaScript projects showcasing web development, API integration, asynchronous programming, and problem-solving skills.
+## Projects
+- Weather App
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- REST APIs
+- Git & GitHub
+
+## Goal
+To strengthen my JavaScript skills through hands-on project development and build a strong software engineering portfolio.
