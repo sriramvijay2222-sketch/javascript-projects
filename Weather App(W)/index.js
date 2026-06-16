@@ -1,5 +1,5 @@
 // creating required objects
-const apikey="75dce67ebde4d0c8e274b00c2e5d8c80"
+const apikey="" //your api_key 
 const cityInput=document.querySelector(".cityInput")
 const submit=document.querySelector("#submit-btn")
 const card=document.querySelector(".container")
