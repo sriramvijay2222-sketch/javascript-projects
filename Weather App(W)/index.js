@@ -1,5 +1,6 @@
+
 // creating required objects
-const apikey="" //your api_key 
+const apikey="75dce67ebde4d0c8e274b00c2e5d8c80" //your api_key 
 const cityInput=document.querySelector(".cityInput")
 const submit=document.querySelector("#submit-btn")
 const card=document.querySelector(".container")
@@ -8,6 +9,7 @@ const citytemperatur=document.querySelector("#Citytemperature")
 const humiditydisplay=document.querySelector("#humiditydisplay")
 const weather_description=document.querySelector("#description-display")
 const weatherimage=document.querySelector("#weatheremoji")
+const showerror=document.querySelector(".error-message")
 const get_cityname=(data)=>{
         return data.name
     }
@@ -27,19 +29,28 @@ const get_temperature=(data)=>{
 }
 const add_data=(city,humidity,description,weather_img,temp)=>{
     cityInput.value=""
+    showerror.style.display="none"
     citydisplay.textContent=city
-    citytemperatur.textContent=temp
-    humiditydisplay.textContent=humidity
+    citytemperatur.textContent=`${temp}°C`
+    humiditydisplay.textContent=`Humidity: ${humidity}%`
     weather_description.textContent=description
     weatherimage.innerHTML=`<img src="${weather_img}" alt="weather icon">`
     card.style.display='block'
 }
-
+const showError=(message)=>{
+    showerror.textContent=message+"❌"
+    showerror.style.display="block"
+    card.style.display="none"
+}
 const display_data=async ()=>{
     try{
-         const respone=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&appid=${apikey}&units=metric`)
+         const city=cityInput.value.trim()
+         if(!city){
+            throw new Error("Please enter a city name")
+         }
+         const respone=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apikey}&units=metric`)
          if(!respone.ok){
-            throw new Error("Could not fetch weather data")
+            throw new Error("Invalid city name")
          }
          const data=await respone.json()
          console.log(data)
@@ -56,8 +67,12 @@ const display_data=async ()=>{
     }
     catch(error)
     {
-        console.error(error)
+        showError(error.message)
     }
 }
-
+document.addEventListener("keydown",(event)=>{
+    if(event.key=="Enter"){
+        event.preventDefault()
+        display_data()}
+})
 submit.addEventListener("click",display_data)

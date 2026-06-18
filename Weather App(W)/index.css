@@ -50,6 +50,19 @@ body{
     box-shadow: 2px 2px 5px boxshadow;
     text-align: center;
 }
+.error-message{
+    display: none;
+    background-color: #fff;
+    padding: 50px;
+    min-width: 200px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px boxshadow;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
 .container h1{
     font-size: 2.5rem;
     margin-top: 0px;
