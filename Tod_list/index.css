@@ -75,7 +75,7 @@
 #list-container li{
     display:flex;
     align-items:center;
-    gap:12px;
+    gap:15px;
     padding:12px 15px;
     margin-bottom:10px;
     border-radius:8px;

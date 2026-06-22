@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
     <header class="head-section">
         <div class="logo-section">
@@ -15,7 +16,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
             Expense Tracker
         </div>
         <button class="mode-theme-section">
-        <img src="images/half-moon.png" alt="">
+            <img src="images/half-moon.png" alt="">
         </button>
     </header>
     <main>
@@ -27,8 +28,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                     <h1>&#8377;12,500</h1>
                 </div>
                 <div class="balance-icon">
-                     <i class="fa-solid fa-arrow-trend-up"></i>
-                 </div>
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                </div>
             </div>
         </section>
         <section class="income-expense-section">
@@ -48,6 +49,48 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
                 <div class="expense-info">
                     <p>Expense</p>
                     <h1 class="income">&#8377;18,000</h1>
+                </div>
+            </div>
+        </section>
+
+        <section class="Add-section">
+            <div class="transaction-container">
+                <h2 class="heading">Add Transaction</h2>
+                <div class="transaction-data">
+                    <div class="Transaction-title">
+                        <p>Title</p>
+                        <input type="text" placeholder="Enter title">
+                    </div>
+                    <div class="Transaction-Amount">
+                        <p>Amount</p>
+                        <input type="text" placeholder="Enter amount">
+                    </div>
+                    <div class="Transaction-type">
+                        <p>Type</p>
+                        <label for="type"></label>
+                        <select id="type" name="type">
+                            <option value="income">Income</option>
+                            <option value="expense">Expense</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="transaction">Add Transaction</button>
+            </div>
+        </section>
+        <section class="search-section">
+            <div class="search-container">
+                <label >Search</label>
+                <div class="search-box">
+                    <input type="text" placeholder="Search transaction...">
+                    <span class="icon">🔍</span>
+                </div>
+            </div>  
+            <div class="filter-buttons">
+                <p>Filter</p>
+                <div class="buttons">
+                    <button class="All-button">All</button>
+                    <button class="Income">Income</button>
+                    <button class="Expense">Expense</button>
                 </div>
             </div>
         </section>
