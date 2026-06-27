@@ -48,11 +48,10 @@
                 </div>
                 <div class="expense-info">
                     <p>Expense</p>
-                    <h1 class="income">&#8377;18,000</h1>
+                    <h1 class="expense">&#8377;18,000</h1>
                 </div>
             </div>
         </section>
-
         <section class="Add-section">
             <div class="transaction-container">
                 <h2 class="heading">Add Transaction</h2>
@@ -69,8 +68,8 @@
                         <p>Type</p>
                         <label for="type"></label>
                         <select id="type" name="type">
-                            <option value="income">Income</option>
-                            <option value="expense">Expense</option>
+                            <option value="Income">Income</option>
+                            <option value="Expense">Expense</option>
                         </select>
                     </div>
                 </div>
@@ -79,12 +78,12 @@
         </section>
         <section class="search-section">
             <div class="search-container">
-                <label >Search</label>
+                <label>Search</label>
                 <div class="search-box">
                     <input type="text" placeholder="Search transaction...">
                     <span class="icon">🔍</span>
                 </div>
-            </div>  
+            </div>
             <div class="filter-buttons">
                 <p>Filter</p>
                 <div class="buttons">
@@ -94,6 +93,41 @@
                 </div>
             </div>
         </section>
+        <section class="transactions-data-container">
+            <div class="transaction-1">
+                <div class="transaction-details">
+                    <div class="transaction-icon"><i class="fa-solid fa-sack-dollar"
+                            style="color: rgb(99, 230, 190);"></i></div>
+                    <div class="transaction-data">
+                        Salary<br>
+                        May 20,2024
+                    </div>
+                </div>
+                <div class="transaction-amount">
+                    <p>&#8377;18,000</p>
+                    <button class="delete-transaction">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>
+                <div class="transaction-1">
+                <div class="transaction-details">
+                    <div class="transaction-icon"><i class="fa-solid fa-sack-dollar"
+                            style="color: rgb(99, 230, 190);"></i></div>
+                    <div class="transaction-data">
+                        Salary<br>
+                        May 20,2024
+                    </div>
+                </div>
+                <div class="transaction-amount">
+                    <p>&#8377;18,000</p>
+                    <button class="delete-transaction">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
+    <script src="index.js"></script>
 </body>
 </html>
